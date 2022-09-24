@@ -1,27 +1,25 @@
 export interface MainData {
-    years: {
+    transactions: {
         [key: string]: {
-            [key: string]: {
-                date: string,
-                item: string,
-                amount: string,
-                number: string,
-                account: string
-            }
+            date: string,
+            item: string,
+            amount: number,
+            account: string
         }
     },
     presetTransactions: {
         [key: string]: {
             howOften: string,
             item: string,
-            amount: string,
+            amount: number,
             account: string,
             startDate: string
         }
     },
     accounts: {
         [key: string]: {
-            startingAmount: string
+            startingAmount: number,
+            adjustment: number
         }
-    }
+    },
 }

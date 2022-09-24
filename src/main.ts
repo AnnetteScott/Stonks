@@ -5,10 +5,23 @@ import { reactive } from 'vue';
 import { MainData } from './types'
 
 const defaultMainData = {
-    years: {},
+    transactions: {},
     presetTransactions: {},
-    accounts: {}
-}
+    accounts: {
+        Main: {
+            startingAmount: 191,
+            adjustment: 0
+        },
+        Trip: {
+            startingAmount: 260,
+            adjustment: 0
+        },
+        Reserve: {
+            startingAmount: 2000,
+            adjustment: 0
+        }
+    }
+} as MainData
 
 export const mainData = reactive({...defaultMainData})
 
